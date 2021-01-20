@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Conga_Assignment">
+              <span class="suite-name border-passed">Conga Assignment</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Conga_Assignment">
+                    <span>C:\Users\dada\workspace\CongaAssignment\TestNG.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Conga_Assignment">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Conga_Assignment">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Conga_Assignment">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Conga_Assignment">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Conga_Assignment">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Conga_Assignment">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">6 methods,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Conga_Assignment" class="hide-methods passed suite-Conga_Assignment"> (hide)</a> <!-- hide-methods passed suite-Conga_Assignment -->
+                      <a href="#" panel-name="suite-Conga_Assignment" class="show-methods passed suite-Conga_Assignment"> (show)</a> <!-- show-methods passed suite-Conga_Assignment -->
+                    </span>
+                    <div class="method-list-content passed suite-Conga_Assignment">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.apitest.RestAssuredTest" hash-for-method="invalidKeyPostStation_401">invalidKeyPostStation_401</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.test.ShoppingPageTest" hash-for-method="testSoppingCart">testSoppingCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.apitest.RestAssuredTest" hash-for-method="validateDeleteStation_204">validateDeleteStation_204</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.apitest.RestAssuredTest" hash-for-method="validateDeleteStation_404">validateDeleteStation_404</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.apitest.RestAssuredTest" hash-for-method="validateGetStation">validateGetStation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Conga_Assignment" title="com.qa.apitest.RestAssuredTest" hash-for-method="validatePostStation_201">validatePostStation_201</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Conga_Assignment -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Conga_Assignment" class="panel Conga_Assignment">
+          <div class="suite-Conga_Assignment-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.test.ShoppingPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSoppingCart">
+                  </a> <!-- testSoppingCart -->
+                  <span class="method-name">testSoppingCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Conga_Assignment-class-passed -->
+          <div class="suite-Conga_Assignment-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.apitest.RestAssuredTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidKeyPostStation_401">
+                  </a> <!-- invalidKeyPostStation_401 -->
+                  <span class="method-name">invalidKeyPostStation_401</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDeleteStation_204">
+                  </a> <!-- validateDeleteStation_204 -->
+                  <span class="method-name">validateDeleteStation_204</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDeleteStation_404">
+                  </a> <!-- validateDeleteStation_404 -->
+                  <span class="method-name">validateDeleteStation_404</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateGetStation">
+                  </a> <!-- validateGetStation -->
+                  <span class="method-name">validateGetStation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatePostStation_201">
+                  </a> <!-- validatePostStation_201 -->
+                  <span class="method-name">validatePostStation_201</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Conga_Assignment-class-passed -->
+        </div> <!-- panel Conga_Assignment -->
+        <div panel-name="test-xml-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\dada\workspace\CongaAssignment\TestNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Conga Assignment&quot;&gt;
+  &lt;test name=&quot;Conga&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.apitest.RestAssuredTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.test.ShoppingPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Conga --&gt;
+&lt;/suite&gt; &lt;!-- Conga Assignment --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Conga Assignment</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Conga (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Conga Assignment</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Conga Assignment</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Conga_Assignment');
+function tableData_Conga_Assignment() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(6);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testSoppingCart')
+data.setCell(0, 2, 'com.qa.test.ShoppingPageTest')
+data.setCell(0, 3, 13421);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'invalidKeyPostStation_401')
+data.setCell(1, 2, 'com.qa.apitest.RestAssuredTest')
+data.setCell(1, 3, 4790);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateDeleteStation_404')
+data.setCell(2, 2, 'com.qa.apitest.RestAssuredTest')
+data.setCell(2, 3, 999);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validatePostStation_201')
+data.setCell(3, 2, 'com.qa.apitest.RestAssuredTest')
+data.setCell(3, 3, 999);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateDeleteStation_204')
+data.setCell(4, 2, 'com.qa.apitest.RestAssuredTest')
+data.setCell(4, 3, 792);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validateGetStation')
+data.setCell(5, 2, 'com.qa.apitest.RestAssuredTest')
+data.setCell(5, 3, 613);
+window.suiteTableData['Conga_Assignment']= { tableData: data, tableDiv: 'times-div-Conga_Assignment'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <div id="times-div-Conga_Assignment">
+              </div> <!-- times-div-Conga_Assignment -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Conga Assignment</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Conga_Assignment" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.apitest.RestAssuredTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">invalidKeyPostStation_401</span>
+                <span class="method-start">964 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validatePostStation_201</span>
+                <span class="method-start">5759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateGetStation</span>
+                <span class="method-start">6763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateDeleteStation_204</span>
+                <span class="method-start">7380 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateDeleteStation_404</span>
+                <span class="method-start">8174 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.test.ShoppingPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">9175 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSoppingCart</span>
+                <span class="method-start">21741 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35164 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite name="Conga Assignment">       
+  <test name="Conga">
+	 <classes>
+	   <class name="com.qa.apitest.RestAssuredTest"/>
+	   <class name="com.qa.test.ShoppingPageTest"/>
+	 </classes>
+   </test>
+</suite>
