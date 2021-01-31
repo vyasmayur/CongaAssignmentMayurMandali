@@ -66,7 +66,7 @@ public class ShoppingPage extends TestBase {
 	WebElement productcolor;
 
 	// Product quantity
-	@FindBy(css = "input[name='quantity_1_1_0_364543']")
+	@FindBy(css = "input[class^='cart_quantity_input']")
 	WebElement productqty;
 
 	// Product price
