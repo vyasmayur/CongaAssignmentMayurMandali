@@ -22,11 +22,12 @@ public class RestAssuredTest extends ApiBase {
 
 	public String id1;
 	public String id2;
-
+	
+	//Fetching details from ApiBase Constructor
 	public RestAssuredTest() {
 		super();
 	}
-	//Fetching details from  ApiBase Constructor
+	
 	@BeforeTest
 	public void setup() {
 		//Initializing API Details
@@ -42,9 +43,9 @@ public class RestAssuredTest extends ApiBase {
 		Response response = request.body(ApiBase.postBodyData("DEMO_TEST001", "Interview Station-123", 33.33, -111.43, 444))
 							.post("stations");
 
+		//Asserting response code and Message
 		int actualStatusCode = response.statusCode();
 		Assert.assertEquals(actualStatusCode, 401);
-
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String actualMessage = jsonPathEvaluator.get("message");
 		Assert.assertEquals(actualMessage,
@@ -66,19 +67,15 @@ public class RestAssuredTest extends ApiBase {
 				.body(ApiBase.postBodyData("Interview1", "Interview Station-222", 33.44, -12.44, 444)).when()
 				.post("stations");
 
-		System.out.println(response1.getBody().asString());
+		//Assert status code of API response and save response id in id1 
 		JsonPath jsonPathEvaluator1 = response1.jsonPath();
 		id1 = jsonPathEvaluator1.get("ID");
-
-		System.out.println(id1);
 		int actualStatusCode1 = response1.statusCode();
 		Assert.assertEquals(actualStatusCode1, 201, "Status code for first request is Wrong");
 
-		System.out.println(response2.getBody().asString());
-
+		//Assert status code of API response and save response id in id2
 		JsonPath jsonPathEvaluator2 = response2.jsonPath();
 		id2 = jsonPathEvaluator2.get("ID");
-		System.out.println(id1);
 		int actualStatusCode2 = response2.statusCode();
 		Assert.assertEquals(actualStatusCode2, 201, "Status code for Second request is Wrong");
 
@@ -88,7 +85,7 @@ public class RestAssuredTest extends ApiBase {
 	public void validateGetStation() {
 
 		//Verify that the stations were successfully stored in the DB 
-		//and their values are the same as specified in the registration requestin Test case 2. 
+		//and their values are the same as specified in the registration request in Test case 2. 
 		Response response = RestAssured.given().param("appid", apiProp.getProperty("APIKey")).when().get("stations");
 		
 		List getId = response.getBody().path("id");
@@ -134,6 +131,7 @@ public class RestAssuredTest extends ApiBase {
 		Response response1 = request.delete("stations/" + id1);
 		Response response2 = request.delete("stations/" + id2);
 
+		//Assert status code of API response
 		int actualStatusCode1 = response1.statusCode();
 		int actualStatusCode2 = response2.statusCode();
 		Assert.assertEquals(actualStatusCode1, 204, "API status not Matched for request 1");
@@ -150,16 +148,17 @@ public class RestAssuredTest extends ApiBase {
 		Response response1 = request.delete("stations/" + id1);
 		Response response2 = request.delete("stations/" + id2);
 
+		//Assert status code of API response
 		int actualStatusCode1 = response1.statusCode();
 		int actualStatusCode2 = response1.statusCode();
 		Assert.assertEquals(actualStatusCode1, 404, "API status not Matched for request 1");
 		Assert.assertEquals(actualStatusCode2, 404, "API status not Matched for request 2" );
 
+		//Assert API response Message
 		JsonPath jsonPathEvaluator1 = response1.jsonPath();
 		String actualMessage1 = jsonPathEvaluator1.get("message");
 		JsonPath jsonPathEvaluator2 = response2.jsonPath();
 		String actualMessage2 = jsonPathEvaluator2.get("message");
-
 		Assert.assertEquals(actualMessage1, "Station not found", "API Message not Matched for request 1");
 		Assert.assertEquals(actualMessage2, "Station not found", "API Message not Matched for request 2");
 	}

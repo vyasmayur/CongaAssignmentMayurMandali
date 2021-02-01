@@ -26,8 +26,7 @@ public class ShoppingPageTest extends TestBase {
 	}
 
 	@Test
-	public void testSoppingCart() {
-		shoppingPage = new ShoppingPage();
+	public void testShoppingCart() {
 		
 		//Expected Shopping cart values 
 		String expectedMessageText = "Product successfully added to your shopping cart";		
@@ -37,17 +36,18 @@ public class ShoppingPageTest extends TestBase {
 		String expectedProductQty = "1";
 		String expectedProductPrice = "$16.51";
 
-		shoppingPage.verifySoppingCart();
-		SoftAssert softassert = new SoftAssert();
+		//Executing verifyShoppingCart method to execute navigation steps
+		shoppingPage.verifyShoppingCart();
 
 		//Asserting Shopping cart data 
-		softassert.assertEquals(shoppingPage.ActualMessageText, expectedMessageText,"Incorrect Message text" );
-		softassert.assertEquals(shoppingPage.Actualproducttitle, expectedProductTitle, "Incorrect Product Title");
-		softassert.assertEquals(shoppingPage.Actualproductdetail, expectedProductDetail, "Incorrect Product details");
-		softassert.assertEquals(shoppingPage.Actualproductcolorandsize, expectedProductColorAndSize,
+		SoftAssert softassert = new SoftAssert();
+		softassert.assertEquals(shoppingPage.actualMessageText, expectedMessageText,"Incorrect Message text" );
+		softassert.assertEquals(shoppingPage.actualProductTitle, expectedProductTitle, "Incorrect Product Title");
+		softassert.assertEquals(shoppingPage.actualProductDetail, expectedProductDetail, "Incorrect Product details");
+		softassert.assertEquals(shoppingPage.actualProductColorAndSize, expectedProductColorAndSize,
 				"Incorrect Product Color and Size");
-		softassert.assertEquals(shoppingPage.Actualproductqty, expectedProductQty, "Incorrect Product Qty");
-		softassert.assertEquals(shoppingPage.Actualproductprice, expectedProductPrice, "Incorrect Product Price");
+		softassert.assertEquals(shoppingPage.actualProductQty, expectedProductQty, "Incorrect Product Qty");
+		softassert.assertEquals(shoppingPage.actualProductPrice, expectedProductPrice, "Incorrect Product Price");
 		softassert.assertAll();
 	}
 

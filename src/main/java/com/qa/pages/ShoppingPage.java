@@ -42,7 +42,7 @@ public class ShoppingPage extends TestBase {
 	WebElement addtocartlnk;
 
 	// Product successfully added... text
-	@FindBy(css = "div[class='layer_cart_product col-xs-12 col-md-6'] h2")
+	@FindBy(css = "div[class^='layer_cart_product'] h2")
 	WebElement messagetext;
 
 	// Total qty added in cart
@@ -73,20 +73,20 @@ public class ShoppingPage extends TestBase {
 	@FindBy(css = "span[id^=total_product_price]")
 	WebElement productprice;
 
-	// Page Factory Init
+	// Page Factory InitELements
 	public ShoppingPage() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public String ActualMessageText;
-	public String Actualproducttitle;
-	public String Actualproductdetail;
-	public String Actualproductcolorandsize;
-	public String Actualproductqty;
-	public String Actualproductprice;
-
 	
-	public void verifySoppingCart() {
+	public String actualMessageText;
+	public String actualProductTitle;
+	public String actualProductDetail;
+	public String actualProductColorAndSize;
+	public String actualProductQty;
+	public String actualProductPrice;
+
+	public void verifyShoppingCart() {
 
 		// Login to Shopping cart Application
 		// Go to T-shirts and Add product 'Faded Short Sleeve T-shirts' to cart
@@ -96,23 +96,27 @@ public class ShoppingPage extends TestBase {
 		password.sendKeys(prop.getProperty("password"));
 		loginbtn.click();
 
+		//Wait until T-Shirt link is showing
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-
 		wait.until(ExpectedConditions.visibilityOf(tshirtlnk)).click();
 		productlnk.click();
 		addtocartlnk.click();
 
+		//Fetch text content of add to cart product message 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String fetchMessageText = js.executeScript("return arguments[0].lastChild.textContent;", messagetext)
 				.toString();
-		ActualMessageText = fetchMessageText.trim();
+		actualMessageText = fetchMessageText.trim();
 
+		//Click on Checkout link
 		checkoutlnk.click();
-		Actualproducttitle = producttitle.getText();
-		Actualproductdetail = productdetail.getText();
-		Actualproductcolorandsize = productcolor.getText();
-		Actualproductqty = productqty.getAttribute("value");
-		Actualproductprice = productprice.getText();
+		
+		//Store actual product data
+		actualProductTitle = producttitle.getText();
+		actualProductDetail = productdetail.getText();
+		actualProductColorAndSize = productcolor.getText();
+		actualProductQty = productqty.getAttribute("value");
+		actualProductPrice = productprice.getText();
 
 	}
 
